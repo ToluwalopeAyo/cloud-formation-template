@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout:
       - run
-          name: Create CloudFormation Stack
+          name: "Create CloudFormation Stack"
           command: |
             aws cloudformation deploy \
             --template-body file://network.yml \
