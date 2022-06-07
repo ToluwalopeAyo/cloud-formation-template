@@ -11,7 +11,7 @@ jobs:
           name: "Create CloudFormation Stack"
           command: |
             aws cloudformation create-stack \
-            --template-file file://network.yml \
+            --template-body file://network.yml \
             --parameters file://network-param.json \
             --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5}
   
