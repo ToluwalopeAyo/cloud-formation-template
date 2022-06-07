@@ -5,8 +5,8 @@ jobs:
     docker:
       - image: amazon/aws-cli
     steps:
-      - checkout
-      - run
+      - checkout:
+      - run:
           name: "Create CloudFormation Stack"
           command: |
             aws cloudformation deploy \
