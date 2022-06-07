@@ -8,6 +8,11 @@ jobs:
       - checkout
       
       - run:
+          name: "Check aws version"
+          command: |
+            aws --version
+      
+      - run:
           name: "Create CloudFormation Stack"
           command: |
             aws cloudformation deploy \
