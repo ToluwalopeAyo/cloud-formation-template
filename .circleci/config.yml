@@ -8,14 +8,9 @@ jobs:
       - checkout
       
       - run:
-          name: "Check aws version"
-          command: |
-            aws --version
-      
-      - run:
           name: "Create CloudFormation Stack"
           command: |
-            aws cloudformation deploy \
+            aws cloudformation create-stack \
             --template-file file://network.yml \
             --parameters file://network-param.json \
             --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5}
