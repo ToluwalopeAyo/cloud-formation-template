@@ -39,3 +39,4 @@ workflows:
   my_workflow:
     jobs:
       - create-infrastructure
+      - rollback
